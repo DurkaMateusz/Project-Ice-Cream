@@ -1,0 +1,1 @@
+{"mappings":"A,2D","sources":["<anon>","src/js/modal-about-video.js"],"sourcesContent":["function pauseVideo() {\n    $(\"#myVideo\").get(0).pause();\n}\n\n//# sourceMappingURL=index.df08b6ba.js.map\n","function pauseVideo() {\n  $('#myVideo').get(0).pause();\n}\n"],"names":[],"version":3,"file":"index.df08b6ba.js.map"}
