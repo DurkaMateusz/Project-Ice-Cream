@@ -4,7 +4,8 @@
   "description": "Na komputerze musi być zainstalowana LTS-wersja [Node.js](https://nodejs.org/en/).",
   "homepage": "https://DurkaMateusz.github.io/Project-Ice-Cream",
   "scripts": {
-    "build": "parcel build src/*.html --public-url /Project-Ice-Cream/"
+    "build": "parcel build src/*.html --public-url /Project-Ice-Cream/",
+    "dev": "parcel src/*.html",
   },
   "repository": {
     "type": "git",
