@@ -24,7 +24,6 @@
     "parcel": "^2.8.3",
     "posthtml-include": "^1.7.4"
   },
-  "main": ".posthtmlrc.js",
   "dependencies": {
     "abortcontroller-polyfill": "^1.7.5",
     "ansi-styles": "^4.3.0",
