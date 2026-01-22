@@ -115,11 +115,15 @@
     gap: 70px;
   }
 }
-.modal-radio {
+/* .modal-radio {
   position: fixed;
   opacity: 0;
   pointer-events: none;
+} */
+.modal-radio {
+  display: none;
 }
+
 .product-img {
   position: relative;
   width: 132px;
