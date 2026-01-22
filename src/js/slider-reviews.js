@@ -1,40 +1,40 @@
-var myIndex = 0;
-carousel();
+let slideIndex = 1;
+showSlides(slideIndex);
+autoSlide();
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName('mySlides ');
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none ';
-  }
-  myIndex++;
-  if (myIndex > x.length) {
-    myIndex = 1;
-  }
-  x[myIndex - 1].style.display = 'block ';
-  setTimeout(carousel, 10000); // Change image every 20 seconds
-}
-
-var slideIndex = 1;
-showDivs(slideIndex);
-
+// Kliknięcie w kropkę
 function currentDiv(n) {
-  showDivs((slideIndex = n));
+  slideIndex = n;
+  showSlides(slideIndex);
 }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName('mySlides');
-  var dots = document.getElementsByClassName('demo');
-  if (n > x.length) {
-    slideIndex = 1;
+// Automatyczne przewijanie
+function autoSlide() {
+  slideIndex++;
+  showSlides(slideIndex);
+  setTimeout(autoSlide, 5000); // 10 sekund
+}
+
+function showSlides(n) {
+  const slides = document.getElementsByClassName('mySlides');
+  const dots = document.getElementsByClassName('mySlides-button');
+
+  if (n > slides.length) slideIndex = 1;
+  if (n < 1) slideIndex = slides.length;
+
+  // Ukryj wszystkie slajdy
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
   }
-  if (n < 1) {
-    slideIndex = x.length;
+
+  // Deaktywuj wszystkie kropki
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove('w');
   }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';
-  }
-  for (i = 0; i < dots.length; i++) {}
-  x[slideIndex - 1].style.display = 'block';
+
+  // Pokaż aktywny slajd
+  slides[slideIndex - 1].style.display = 'block';
+
+  // Podświetl aktywną kropkę
+  dots[slideIndex - 1].classList.add('w');
 }
