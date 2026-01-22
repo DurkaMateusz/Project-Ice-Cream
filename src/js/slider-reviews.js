@@ -38,3 +38,5 @@ function showSlides(n) {
   // Podświetl aktywną kropkę
   dots[slideIndex - 1].classList.add('w');
 }
+
+window.currentDiv = currentDiv;
